@@ -1,0 +1,68 @@
+import random
+
+money = 1000
+numbers = [26, 35, 28, 29, 22, 31, 20, 33, 24, 10, 8, 11, 13, 6, 17, 2, 4, 15, 3, 12, 7, 18, 9, 14, 1, 16, 5, 23, 30, 36, 27, 34, 25, 21, 19, 32]
+colors = ["red", "black"]
+other = ["odd", "even"]
+print("You have $1000, place your bets wisely")
+
+def mc():
+    if money <= 0:
+        exit()
+def c ():
+    global money
+    colors_roll = (random.choice(colors))
+    color_bet = input("Color bet?: ")
+    wager = input("How much do you want to wager? ")
+    if color_bet == colors_roll:
+        print(colors_roll)
+        print("OMG! Ya did it!")
+        money = money + int(wager)
+        print(money)
+        mc()
+
+    else:
+        print(colors_roll)
+        print("Get Wrecked")
+        money = money - int(wager)
+        print(money)
+        mc()
+
+c()
+def o ():
+    global money
+    others_roll = (random.choice(other))
+    other_bet = input ("Odd or Even?: ")
+    wager = input("How much do you want to wager? ")
+    if other_bet == others_roll:
+        print(others_roll)
+        print("OMG! Ya did it!")
+        money = money + int(wager)
+        print(money)
+        mc()
+
+    else:
+        print(others_roll)
+        print("Get Wrecked")
+        money = money - int(wager)
+        print(money)
+        mc()
+o()
+def n ():
+    global money
+    numbers_roll =str(random.choice(numbers))
+    numbers_bet = input("Numbers bet?: ")
+    wager = input("How much do you want to wager? ")
+    if numbers_bet == numbers_roll:
+        print(numbers_roll)
+        print("OMG! Ya did it!")
+        money = money + (int(wager) * 2)
+        print(money)
+        mc()
+    else:
+        print(numbers_roll)
+        print("Get Wrecked")
+        money = money - int(wager)
+        print(money)
+        mc()
+n()
