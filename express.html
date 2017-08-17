@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Express</title>
+        <link rel="stylesheet" href="Expression.css">
+        
+    </head>
+    <body>
+    <h1>Express</h1>
+<textarea id = "textarea1">
+Welcome to the Expression page. This is page is specialized to help avid readers and writers to express their feelings and share their opinions. 
+
+</textarea>
+<br>
+<button id = "submit" onclick="myFunction()">Submit</button>
+<script>
+    function myFunction(){
+         
+        var btn = document.createElement("div");
+        var t = document.createTextNode(document.getElementById("textarea1").value);
+        btn.appendChild(t);
+            document.body.appendChild(btn);
+        
+        }
+</script>
+
+
+    </body>
+</html>
