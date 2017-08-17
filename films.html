@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<HEAD>
 <title> Interests </title>
 
- <style> body {
+ <style>
+   body {
  font-family: "Lucida Console", monospace;
  background-color: pink;
 }
@@ -41,29 +42,17 @@ div.tab button.active {
 }
 #photo{
  height:350px;
- margin:auto;
+ margin-left:20px;
  float:left;
  width:250px;}
  
-#photo3{
- height: 350px;
- margin:auto;
- float:left;
- width:250px;}
-#photo4{
- height: 400px;
- width:250px;
- margin:auto;
- float:left;
-}
- 
+#photo2{
+width:250px;}
+margin-left:25px;
+  
 #quote{
  height:300px;
  width:425px;}
- 
-#photo5{
- height:400px;
- width:300px;}
  
 #quote3{
  height:250px;
@@ -71,27 +60,27 @@ div.tab button.active {
 
 </head>
 <body>
+  
 <h1><strong> Films/ TV SHOWS </strong></h1>
 <div class="tab">
  <button class="tablinks" onclick="openCategory(event, 'Posters/Trailers')" id="defaultOpen">Posters/Trailers</button>
  
  <button class="tablinks" onclick="openCategory(event, 'Movie/TV Show Quotes')">Movie/TV Show Quotes</button>
+  
+ 
 </div>
 
 <div id="Posters/Trailers" class="tabcontent">
  <h3>Posters/Trailers</h3>
-<img id = "photo"
- src="http://img.auctiva.com/imgdata/1/1/7/9/1/0/1/webimg/561775822_o.jpg"/>
-
- <img id = "photo3"
- src= "https://milesherndon.com/uploads/blogImages/psycho-1960-movie-poster.jpg"/>
- <img id = "photo4"
- src= "https://i.jeded.com/i/big-hero-6.34102.jpg"/>
-
- <img id = "photo5"
- src= "http://nuggettheatre.com/wp-content/uploads/2016/05/Captain-America-Civil-War-movie-poster.jpg"/>
+ 
+  <p style="float: left; width: 250px; height: 500px; margin-left: 5px; margin-bottom: 5px; text-align: center: font-size: 8pt;"><img id= "photo" src="http://img.auctiva.com/imgdata/1/1/7/9/1/0/1/webimg/561775822_o.jpg" style="width: 100%;"><em><strong>Five high school students from different walks of life endure a Saturday detention under a power-hungry principal (Paul Gleason). The disparate group includes rebel John (Judd Nelson), princess Claire (Molly Ringwald), outcast Allison (Ally Sheedy), brainy Brian (Anthony Michael Hall) and Andrew (Emilio Estevez), the jock. Each has a chance to tell his or her story, making the others see them a little differently -- and when the day ends, they question whether school will ever be the same.</em></strong></p>
 
 
+
+  <p style="float: right; width: 250px; margin-left: 5px; margin-bottom: 5px; text-align: center: font-size: 5pt;"><img id-"photo2"
+                                                                                                                src="https://milesherndon.com/uploads/blogImages/psycho-1960-movie-poster.jpg" style="width: 100%;">
+    <em><strong>Phoenix secretary Marion Crane (Janet Leigh), on the lam after stealing $40,000 from her employer in order to run away with her boyfriend, Sam Loomis (John Gavin), is overcome by exhaustion during a heavy rainstorm. Traveling on the back roads to avoid the police, she stops for the night at the ramshackle Bates Motel and meets the polite but highly strung proprietor Norman Bates (Anthony Perkins), a young man with an interest in taxidermy and a difficult relationship with his mother.</em></strong></p>
+ 
 </div>
 
 <div id="Movie/TV Show Quotes" class="tabcontent">
@@ -107,9 +96,35 @@ div.tab button.active {
  <img id = "quote3"
  src="https://media.giphy.com/media/qwyK9UZjJ1QLC/giphy.gif"/>
  <p><em><strong> Supernatural</strong>,2005-</em></p>
- 
-</div>
 
+
+
+<script>
+function openCategory(evt, categoryName) {
+ var i, tabcontent, tablinks;
+ tabcontent = document.getElementsByClassName("tabcontent");
+ for (i = 0; i < tabcontent.length; i++) {
+ tabcontent[i].style.display = "none";
+ }
+ tablinks = document.getElementsByClassName("tablinks");
+ for (i = 0; i < tablinks.length; i++) {
+ tablinks[i].className = tablinks[i].className.replace(" active", "");
+ }
+ document.getElementById(categoryName).style.display = "block";
+ evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+  
+
+
+</script>
+  
+
+  
+ 
+</body>
+</html> 
 
 <script>
 function openCategory(evt, categoryName) {
